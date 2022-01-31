@@ -72,6 +72,9 @@ EXPOSE 6080 9222
 RUN apt install screen -y
 RUN apt install scrot -y
 
+# Install java
+RUN apt-get install default-jdk -y
+
 # Install minecraft at /minecraft.jar
 RUN mkdir /minecraft
 RUN curl -L https://s3.amazonaws.com/Minecraft.Download/launcher/Minecraft.jar -o /minecraft/minecraft.jar
